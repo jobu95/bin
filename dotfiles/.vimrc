@@ -20,6 +20,9 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set backspace=indent,eol,start
+set tw=79
+set bri
+set briopt=shift:4
 
 " numbering
 set number
@@ -45,3 +48,7 @@ set ttyfast
 au BufNewFile,BufRead *.sclass set filetype=cpp
 
 set clipboard=unnamed
+
+" highlight all trailing whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
